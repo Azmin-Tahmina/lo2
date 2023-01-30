@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Filename:   numbers.html
+    Author:     Michael Grzesina (cst000)
+    Date:       1/11/2019
+    Purpose:    
+-->
+<head>
+   <meta charset="UTF-8">
+   <title>Number Converter</title>
+   <script>
+      let numberToConvert = window.prompt("Enter a number to be converted", "100");
+   </script>
+</head>
+<body>
+   <div id="output"></div>
+   <script>
+      document.write("<p>You entered " + numberToConvert + "</p>");
+      document.write("<p>With no base specified: " + parseInt(numberToConvert) + "</p>");
+      document.write("<p>With base 2 specified: " + parseInt(numberToConvert, 2) + "</p>");
+      document.write("<p>With base 8 specified: " + parseInt(numberToConvert, 8) + "</p>");
+      document.write("<p>With base 16 specified: " + parseInt(numberToConvert, 16) + "</p>");
+
+      // or
+
+      let resultString = "<p>You entered " + numberToConvert + "<br />";
+      resultString += "With no base specified: " + parseInt(numberToConvert) + "<br />";
+      resultString += "With base 2 specified: " + parseInt(numberToConvert, 2) + "<br />";
+      resultString += "With base 8 specified: " + parseInt(numberToConvert, 8) + "<br />";
+      resultString += "With base 16 specified: " + parseInt(numberToConvert, 16) + "</p>";
+      document.getElementById("output").innerHTML = resultString;
+   </script>
+</body>
+</html>

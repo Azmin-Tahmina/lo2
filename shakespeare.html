@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Filename:   shakespeare.html
+    Author:     Michael Grzesina (cst000)
+    Date:       1/22/2019
+    Purpose:    Demonstrate updating web pages dynamically
+-->
+<head>
+   <meta charset="UTF-8">
+   <title>Quote Shakespeare</title>
+   <script>
+       "use strict";
+
+       window.onload = init;
+
+       // Function to be called when the window is loaded (so the button exists)
+       function init() {
+           const button = document.getElementById("btnQuote");
+           button.onclick = quote;
+           button.onmouseover = changeBgColor;
+           button.onmouseout = changeColorBack;
+
+           const firstPara = document.querySelector("p");
+           firstPara.onmouseover = changeBgColor;
+           firstPara.onmouseout = changeColorBack;
+       }
+
+       // Function to be called when the button is clicked - replaces innerHTML of selected element
+       function quote() {
+           document.querySelector("p").innerHTML = "Sit you down, father; rest you";
+       }
+
+       // Change the background color and other styles of the invoking object
+       function changeBgColor() {
+           // document.getElementById("btnQuote").style.backgroundColor = "red";
+           this.style.backgroundColor = "red";
+           this.style.fontFamily = "fantasy";
+           this.style.textTransform = "uppercase";
+       }
+
+       // Remove any inline styles from the invoking object
+       function changeColorBack() {
+           // document.getElementById("btnQuote").style.backgroundColor = "";
+           this.style = "";
+       }
+   </script>
+</head>
+<body>
+   <p id="paraReplace">This is the text to be replaced</p>
+
+   <p><button id="btnQuote">Quote Shakespeare</button></p>
+   <!-- or <input type="button" value="Quote Shakespeare" id="btnQuote" /> -->
+</body>
+</html>

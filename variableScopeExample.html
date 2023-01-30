@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Scope</title>
+</head>
+<body>
+  <p id="pid1"></p>
+  <p id="pid2"></p>
+  <p id="pid3"></p>
+
+  <script type="text/javascript">
+    "use strict";
+    /* block comments */
+    // 1. "use strict"
+    // 2. "not using use strict"
+    // 3. case sensitive
+
+    let userName = "TestName";
+    document.getElementById("pid1").innerHTML = "Hello "+ userName;
+    {
+      let firstName ="First Name";
+      let lastName = "Last Name";
+      document.getElementById("pid2").innerHTML = "Hello from block: "+ firstName+ " "+lastName;
+    }
+
+
+    //"It will not work for any of the cases 1 or 2
+    // document.getElementById("pid3").innerHTML = "Hello from block: "+ firstName+ " "+lastName;
+    document.write("<p>"+ "He said \"What\" "+ "</p>");
+    // "1" == 1
+    // "1" === 1
+
+    //Variable testing
+    let booleanVariable = true, stringVariable, numberConvtoStringVariable="100.0987", numberVariable=100, notinitializedVariable;
+    // window.alert(typeof(booleanVariable));
+    // window.alert(typeof(stringVariable));
+    // window.alert(typeof(numberVariable));
+    // window.alert(typeof(numberConvtoStringVariable));
+
+    // Examples of number Conversion:
+
+    notinitializedVariable = Number(numberConvtoStringVariable);
+    // window.alert("Type of Variable: "+ typeof(notinitializedVariable));
+
+    let variable1,variable2,variable3, numberVariable2, variable4, variable5, variable6;
+
+    stringVariable="testString";
+    variable1 = parseInt(stringVariable);
+    // console.log(variable1);
+
+    stringVariable="testString" + 100; // Converted as a string, though I've given a number 100!
+    // console.log("Variable stringVariable: "+ stringVariable);
+    variable2 = parseInt(stringVariable);
+    // console.log(variable2);
+
+    stringVariable="100"+"testString";
+    // console.log("Variable stringVariable: "+ stringVariable);
+    variable3 = parseInt(stringVariable);
+    // console.log(variable3);
+
+    numberVariable2 = 200.09876;
+    console.log("Variable numberVariable2: "+ numberVariable2);
+    variable4 = parseInt(numberVariable2); // binary =2 , octal=8, hex=16 and dec= 10(default)
+    variable5 = parseInt(variable4,2) // convert it as binary ( gave NAN)
+    console.log(variable5);
+
+    variable6 = parseFloat(stringVariable);
+    console.log(variable6);
+
+    let variable7, variable8, variable9;
+    variable7 ="hello";
+    window.alert("variable7 "+ Boolean(variable7));
+    window.alert("variable8 "+ Boolean(variable8));
+
+  </script>
+</body>
+</html>

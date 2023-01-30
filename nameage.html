@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--  
+  Filename: nameage.html
+  Author:   Michael Grzesina (mg)
+  Date:     6/19/2019
+  Purpose:  Experiment with variables
+  -->
+   <meta charset="UTF-8">
+   <title>Name and Age</title>
+   <script>
+       "use strict";
+
+       let name = window.prompt("What is your name?", "Test");
+       let age = window.prompt("What is your age?", "");
+   </script>
+</head>
+<body>
+   <p id="results"></p>
+   <script>
+      document.getElementById("results").innerHTML = name + " is " + age + " years old.";
+   </script>
+</body>
+</html>

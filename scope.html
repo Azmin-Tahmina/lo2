@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--  
+  Filename: scope.html
+  Author:   Michael Grzesina (mg)
+  Date:     1/8/2020
+  Purpose:  To demonstrate scope in JavaScript
+  -->
+   <meta charset="UTF-8">
+   <title>Variable Scope Example</title>
+   <script>
+      "use strict";
+
+      function myFunction() {
+          console.log("In function before declaring variable, scope is: " + scope);
+          var scope = "local";
+          console.log("In function after declaring variable, scope is: " + scope);
+      }
+   </script>
+</head>
+<body>
+   <h1>See console for output...</h1>
+   <script>
+      "use strict";
+
+      var scope = "global";
+
+      console.log("Before calling function, scope is " + scope);
+      myFunction();
+      console.log("After calling function, scope is " + scope);
+   </script>
+</body>
+</html>

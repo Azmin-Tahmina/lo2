@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Filename:   countdown_timer.html
+    Author:     Michael Grzesina (cst000)
+    Date:       1/22/2019
+    Purpose:    
+-->
+<head>
+   <meta charset="UTF-8">
+   <title>Countdown Timer</title>
+   <script>
+       "use strict";
+
+       let count = 10;
+
+       // when the window is loaded, run the init function
+       window.onload = function() {
+           document.getElementById("btnStart").onclick = startTimer;
+       };
+
+       // start the timer
+       function startTimer() {
+           document.getElementById("btnStart").disabled = true;
+           setTimeout(decrementCounter, 1000);
+           document.getElementById("count").innerHTML = "10";
+           document.querySelector("body").style.backgroundColor = "";
+       }
+
+       // decrement the counter and update the web page
+       function decrementCounter() {
+           count--;
+           document.getElementById("count").innerHTML = String(count);
+           if (count > 0) {
+               setTimeout(decrementCounter, 1000);
+           } else {
+               document.querySelector("body").style.backgroundColor = "red";
+               count = 10;
+               document.getElementById("btnStart").disabled = false;
+           }
+       }
+   </script>
+</head>
+<body>
+   <h1>Countdown Timer</h1>
+   <p>Countdown: <span id="count">10</span></p>
+   <p><input type="button" value="Start the timer!" id="btnStart" /></p>
+</body>
+</html>

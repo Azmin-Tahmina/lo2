@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/eventExample.js"></script>
+</head>
+<body>
+  <p>
+        <input type="button" id="click1" value="click me!" onclick="window.alert(this.value);"/>
+        <input type="button" id="click2" value="click me2!" onclick="clickMe(this.value);"/>
+        <input type="button" id="click3" value="click me3!" onclick="increaseMe();"/>
+        <input type="button" id="click4" value="click me4!"/>
+  </p>
+  <script>
+      document.getElementById("click4").onclick = increaseMe;
+  </script>
+</body>
+</html>

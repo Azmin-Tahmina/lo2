@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Filename:   functionexample.html
+    Author:     Michael Grzesina (cst000)
+    Date:       1/18/2019
+    Purpose:    
+-->
+<head>
+   <meta charset="UTF-8">
+   <title>Example of Functions and Scope</title>
+   <script>
+      "use strict";
+
+      // let total = 100; // global variable
+
+      total = 100;
+      console.log("Before function: " + total);
+      // window.alert(addUs(5, 6));
+      // window.alert(addUs("5", 6));
+      console.log("inside function: " + addUs(5, 6));
+      console.log("inside function: " + addUs("5", 6));
+      console.log("After function: " + total);
+
+      var total; // global variable total
+
+      function addUs(value1, value2) {
+          total = value1 + value2; // can use variable even before it is declared with var
+
+          var total; // still a local variable
+          console.log("In the function: " + total);
+          return total;
+      }
+   </script>
+</head>
+<body>
+
+</body>
+</html>

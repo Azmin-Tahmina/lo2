@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <p id="pid"></p>
+  <script type="text/javascript">
+      // "use strict"
+      let var1; // undefined
+      let var2 = null; // null
+      let var3 = "null"; // string
+      let var4  = window.prompt("Input value:"); // if ok, then string,if cancel,null
+      let var5 = parseInt(var4);
+
+      console.log("Value var1: ",var1);
+      console.log("typeof var1: ",typeof(var1));
+      console.log("Value var2: ",var2);
+      console.log("typeof var1: ",typeof(var2));
+      console.log("Value var3: ",var3);
+      console.log("typeof var1: ",typeof(var3));
+      console.log("Value var4: ",var4);
+      console.log("typeof var4: ",typeof(var4));
+      console.log("typeof var4: ",typeof(parseInt(var4)));
+      console.log("Value var5: ",var5);
+      console.log("typeof var5: ",typeof(var5));
+
+      let lastName ="Smith";
+      console.log("Hello ",lastName);
+
+      let var6 = "100";
+      let var7 = 100;
+      console.log("typeof var6: ",typeof(var6));
+      console.log("typeof var7: ",typeof(var7));
+
+      if (var6==var7) //== is converting the variable type
+      {
+          console.log('They are equal for "=="');
+      }
+      else
+      {
+          console.log('They are not equal "=="');
+      }
+
+      if (var6===var7)
+      {
+          console.log('They are equal for "==="');
+      }
+      else
+      {
+          console.log('They are not equal "==="');
+      }
+
+
+  </script>
+</body>
+</html>

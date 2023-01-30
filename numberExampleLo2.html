@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Example</title>
+</head>
+<body>
+<div id="did1"> </div>
+<script type="text/javascript">
+ "use strict";
+
+ let inputNumber = window.prompt("Input a number: ", "100");
+
+ //One way to print:
+ let resultString = "<p>"+ "The Actual Input: "+inputNumber+ "</p>";
+ resultString += "<p>"+ "The Decimal Number: "+parseInt(inputNumber)+ "</p>";
+ resultString += "<p>"+ "The Binary Number: "+parseInt(inputNumber,2)+ "</p>";
+ resultString += "<p>"+ "The Octal Number: "+parseInt(inputNumber,8)+ "</p>";
+ resultString += "<p>"+ "The Hex Number: "+parseInt(inputNumber,16)+ "</p>";
+ document.getElementById("did1").innerHTML = resultString;
+
+ //Another way to print:
+ if(Boolean(inputNumber) == true)
+ {
+   document.write("<p>"+ "The Actual Input: "+inputNumber+ "</p>");
+   document.write("<p>"+ "The Decimal Number: "+parseInt(inputNumber)+ "</p>");
+   document.write("<p>"+ "The Binary Number: "+parseInt(inputNumber,2)+ "</p>");
+   document.write("<p>"+ "The Octal Number: "+parseInt(inputNumber,8)+ "</p>");
+   document.write("<p>"+ "The Hex Number: "+parseInt(inputNumber,16)+ "</p>");
+ }
+
+
+</script>
+</body>
+</html>

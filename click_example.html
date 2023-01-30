@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Filename:   click_example.html
+    Author:     Michael Grzesina (cst000)
+    Date:       1/18/2019
+    Purpose:    
+-->
+<head>
+   <meta charset="UTF-8">
+   <title>Example of Clicking on a Button</title>
+   <script>
+      "use strict";
+
+      let clicks = 0; // global variable
+
+      // Function: processClick
+      // Purpose: This function encapsulates the functionality that handles the button
+      //  click. It increments the count, then let the user know the current count.
+      // Parameters: none
+      // Returns: none
+      // Assumptions: The count is to be displayed in an alert dialog box
+      function processClick() {
+          clicks++;
+          window.alert("The button has been clicked " + clicks + " times");
+      }
+   </script>
+</head>
+<body>
+   <p>
+      <input type="button" value="Click Me!" id="btnClick" />
+             <!--onclick="processClick();" />-->
+             <!--onclick="clicks++; window.alert(clicks);" />-->
+   </p>
+
+   <script>
+      // document.getElementById("btnClick").onclick = processClick;
+      document.getElementById("btnClick").addEventListener("click", processClick);
+   </script>
+</body>
+</html>
