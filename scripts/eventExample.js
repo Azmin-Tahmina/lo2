@@ -2,10 +2,15 @@
 
 let increaseVal = 0;
 
-function clickMe(value)
+function clickMe(inputbutton)
 {
-    window.alert(value);
+    window.alert(inputbutton.value+" "+inputbutton.type+" "+inputbutton.id);
 }
+
+// function clickMe()
+// {
+//     window.alert(this.value+" "+this.type+" "+this.id);
+// }
 
 function increaseMe()
 {

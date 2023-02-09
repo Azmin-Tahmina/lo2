@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="scripts/eventExample.js"></script>
-</head>
-<body>
-  <p>
-        <input type="button" id="click1" value="click me!" onclick="window.alert(this.value);"/>
-        <input type="button" id="click2" value="click me2!" onclick="clickMe(this.value);"/>
-        <input type="button" id="click3" value="click me3!" onclick="increaseMe();"/>
-        <input type="button" id="click4" value="click me4!"/>
-  </p>
-  <script>
-      document.getElementById("click4").onclick = increaseMe;
-  </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="scripts/eventExample.js"></script>
+    </head>
+    <body>
+      <p>
+<!--            event name: click-->
+<!--            event handler: onclick-->
+<!--            either work with event handler or eventlistener-->
+            <input type="button" id="click1" value="click me!" onclick="window.alert(this.value);"/>
+<!--            <input type="button" id="click2" value="click me2 changed value!" onclick="clickMe(this.value);"/>-->
+<!--            <input type="button" id="click2" value="click me2 changed value!" onclick="clickMe(this);"/>-->
+            <input type="button" id="click2" value="click me2 changed value!" onclick="clickMe(this);" />
+            <input type="button" id="click3" value="click me3!" onclick="increaseMe();"/>
+            <input type="button" id="click4" value="click me4!"/>
+            <input type="button" id="click5" value="click me5!"/>
+
+      </p>
+      <script>
+          document.getElementById("click4").onclick = increaseMe;
+          document.getElementById("click5").addEventListener("click",increaseMe);
+      </script>
+    </body>
 </html>

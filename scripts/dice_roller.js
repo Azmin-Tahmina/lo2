@@ -23,6 +23,7 @@ function getRandomInt(max) {
 
 /* global code */
 const SIDES = 6;
+// const Available_cards = [1,2,3,4,5,6,7];
 const NUM_DICE = 3;
 
 // const die1 = getRandomInt(SIDES);

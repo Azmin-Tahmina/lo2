@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example Array</title>
+<!--  <script type="text/javascript" src="scripts/createTable.js"></script>-->
+  <style>
+    table,th,tr,td{
+      border: 1px solid;
+      border-collapse: collapse;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h1>Example Array:</h1>
+<p id="pid"></p>
+<div>
+  <table id="tbl">
+      <thead>
+<!--        <tr>-->
+<!--          <th>Column1</th>-->
+<!--          <th>Column2</th>-->
+<!--          <th>Column3</th>-->
+<!--        </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--        <tr>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        repeat 10 times-->
+
+
+<!--      </tbody>-->
+  </table>
+</div>
+<script>
+  "use strict";
+
+  const TABLE_HEADER = "<thead><tr><th>Column1</th><th>Column2</th><th>Column3</th></tr></thead>";
+  const ROW_NUM = 10
+
+  makeTable();
+
+  function makeTable() {
+    let strTable = TABLE_HEADER + "<tbody>";
+    let i;
+
+    for (i = 0; i < ROW_NUM; i++) {
+      strTable += "<tr><td>" + "testvalue: "+i + "</td><td>"+(i+1)+"</td><td>"+(i+2)+"</td></tr>";
+    }
+    // strTable += "</tbody>";
+    document.getElementById("tbl").innerHTML = strTable + "</tbody>";
+  }
+</script>
+</body>
+</html>

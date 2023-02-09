@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Shakespeare</title>
+    <script>
+      "use strict"
+
+
+      window.onload = init;
+
+      function init()
+      {
+          const button = document.getElementById("qShakespeare");
+          button.onclick = quote;
+          // button.disabled = true;
+          button.onmouseover = changeColor;
+          button.onmouseout = changeColorBack;
+
+
+          const para = document.querySelector("p");
+          para.onmouseover = changeColor;
+          para.onmouseout = changeColorBack;
+      }
+
+      function quote()
+      {
+        let ptag = document.querySelector("p");
+        ptag.innerHTML ="Sit you down, father; rest you";
+        ptag.style.color = "red";
+        ptag.style.background = "lightgreen";
+      }
+
+      function changeColor()
+      {
+          this.style.color = "blue";
+          this.style.background ="red";
+          this.style.fontFamily ="fantasy";
+          this.style.textTransform ="uppercase"
+      }
+
+      function changeColorBack()
+      {
+          this.style = "";
+      }
+
+    </script>
+
+</head>
+<body>
+  <p id="preplace">This value will be changed</p>
+  <p id="pbutton">
+    <button id="qShakespeare">
+       P_Shakespeare
+    </button>
+  </p>
+</body>
+</html>

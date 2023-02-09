@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer Example</title>
+
+</head>
+<body>
+  <h1>Countdown Timer</h1>
+  <p>Countdown: <span id="count">10</span></p>
+  <p><input type="button" value="Start the timer!" id="btnStart" /></p>
+  <script>
+    "use strict";
+
+    let count = 10;
+
+
+    // window.onload = function(){
+    //   document.getElementById("btnStart").onclick = decrementCounter;
+    // }
+
+    window.onload = function(){
+      document.getElementById("btnStart").onclick = decrementCounter;
+              // setTimeout(decrementCounter(),1000);
+    }
+
+    function decrementCounter()
+    {
+      count--;
+      document.getElementById("count").innerHTML = "current count: " + count;
+      if(count>0)
+      {
+        setTimeout(decrementCounter,1000)
+      }
+
+
+    }
+
+
+  </script>
+
+</body>
+</html>
